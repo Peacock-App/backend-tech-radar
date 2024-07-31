@@ -1,14 +1,14 @@
 <html>
 
 <head>
-<meta http-equiv="Content-type" content="text/html; charset=utf-8">
-<title>Peacock Backend Tech Radar</title>
-<link rel="shortcut icon" href="https://www.zalando.de/favicon.ico">
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>Peacock Backend Tech Radar</title>
+    <link rel="shortcut icon" href="https://www.zalando.de/favicon.ico">
 
-<script src="https://d3js.org/d3.v4.min.js"></script>
-<script src="radar.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="radar.js"></script>
 
-<link rel="stylesheet" href="radar.css">
+    <link rel="stylesheet" href="radar.css">
 </head>
 
 <body>
@@ -16,366 +16,648 @@
 <svg id="radar"></svg>
 
 <script>
-radar_visualization({
-  svg_id: "radar",
-  width: 1450,
-  height: 1000,
-  colors: {
-    background: "#fff",
-    grid: "#bbb",
-    inactive: "#ddd"
-  },
-  title: "Peacock Backend Tech Radar — 2024.07",
-  quadrants: [
-    { name: "Languages" },
-    { name: "Infrastructure" },
-    { name: "Frameworks" },
-    { name: "Data Management" }
-  ],
-  rings: [
-    { name: "ADOPT", color: "#93c47d" },
-    { name: "TRIAL", color: "#93d2c2" },
-    { name: "ASSESS", color: "#fbdb84" },
-    { name: "HOLD", color: "#efafa9" }
-  ],
-  print_layout: true,
-  // zoomed_quadrant: 0,
-  //ENTRIES
-  entries: [
-      {
-        quadrant: 2,
-        ring: 2,
-        label: "DDD",
-        active: false,
-        link: "../frameworks/ddd.html",
-        moved: 0
-      },
-      {
-        quadrant: 3,
-        ring: 0,
-        label: "AWS S3",
-        active: false,
-        link: "../datastores/aws_s3.html",
-        moved: 0
-      },
-      {
-        quadrant: 3,
-        ring: 3,
-        label: "PostgreSQL",
-        active: false,
-        link: "../datastores/postgresql.html",
-        moved: 0
-      },
-      {
-        quadrant: 3,
-        ring: 0,
-        label: "Redis",
-        active: false,
-        link: "../datastores/redis.html",
-        moved: 0
-      },
-      {
-        quadrant: 3,
-        ring: 1,
-        label: "AWS DynamoDB",
-        active: false,
-        link: "../datastores/aws_dynamodb.html",
-        moved: 0
-      },
-      {
-        quadrant: 3,
-        ring: 0,
-        label: "MongoDB",
-        active: false,
-        link: "../datastores/mongodb.html",
-        moved: 0
-      },
-      {
-        quadrant: 3,
-        ring: 1,
-        label: "Cockroackdb",
-        active: false,
-        link: "../datastores/cockroackdb.html",
-        moved: 0
-      },
-      {
-        quadrant: 3,
-        ring: 1,
-        label: "Amazon EventBridge",
-        active: false,
-        link: "../datastores/event_bridge.html",
-        moved: 0
-      },
-      {
-        quadrant: 0,
-        ring: 0,
-        label: "Node.js",
-        active: false,
-        link: "../frameworks/nodejs.html",
-        moved: 0
-      },
-      {
-        quadrant: 2,
-        ring: 1,
-        label: "ReactJS",
-        active: false,
-        link: "../frameworks/reactjs.html",
-        moved: 0
-      },
-      {
-        quadrant: 1,
-        ring: 0,
-        label: "Cortex.dev",
-        active: false,
-        link: "../frameworks/cortex_dev.html",
-        moved: 0
-      },
-      {
-        quadrant: 2,
-        ring: 3,
-        label: "Vuex",
-        active: false,
-        link: "../frameworks/vuex.html",
-        moved: 0
-      },
-      {
-        quadrant: 2,
-        ring: 3,
-        label: "Vue.js",
-        active: false,
-        link: "../frameworks/vuejs.html",
-        moved: 0
-      },
-      {
-        quadrant: 1,
-        ring: 3,
-        label: "Docker",
-        active: false,
-        link: "../infrastructure/docker.html",
-        moved: 0
-      },
-      {
-        quadrant: 1,
-        ring: 3,
-        label: "Kubernetes",
-        active: false,
-        link: "../infrastructure/kubernetes.html",
-        moved: 0
-      },
-      {
-        quadrant: 1,
-        ring: 2,
-        label: "Pulumi",
-        active: false,
-        link: "../infrastructure/pulumi.html",
-        moved: 0
-      },
-      {
-        quadrant: 1,
-        ring: 2,
-        label: "Tilt.dev",
-        active: false,
-        link: "../infrastructure/tilt_dev.html",
-        moved: 0
-      },
-      {
-        quadrant: 1,
-        ring: 0,
-        label: "SOPS",
-        active: false,
-        link: "../infrastructure/sops.html",
-        moved: 0
-      },
-      {
-        quadrant: 1,
-        ring: 3,
-        label: "Nginx",
-        active: false,
-        link: "../infrastructure/nginx.html",
-        moved: 0
-      },
-      {
-        quadrant: 1,
-        ring: 0,
-        label: "AWS Lambda",
-        active: false,
-        link: "../infrastructure/aws_lambda.html",
-        moved: 0
-      },
-      {
-        quadrant: 1,
-        ring: 0,
-        label: "Serverless.Js",
-        active: false,
-        link: "../infrastructure/serverless_js.html",
-        moved: 0
-      },
-      {
-        quadrant: 2,
-        ring: 0,
-        label: "Nest.Js",
-        active: false,
-        link: "../infrastructure/nest_js.html",
-        moved: 0
-      },
-      {
-        quadrant: 2,
-        ring: 1,
-        label: "Next.Js",
-        active: false,
-        link: "../infrastructure/next_js.html",
-        moved: 0
-      },
-      {
-        quadrant: 2,
-        ring: 3,
-        label: "Nuxt.Js",
-        active: false,
-        link: "../infrastructure/nuxt_js.html",
-        moved: 0
-      },
-      {
-        quadrant: 0,
-        ring: 0,
-        label: "JavaScript",
-        active: true,
-        link: "javascript.html",
-        moved: 0
-      },
-      {
-        quadrant: 0,
-        ring: 3,
-        label: "OpenAPI (Swagger)",
-        active: true,
-        link: "openapi_swagger.html",
-        moved: 0
-      },
-      {
-        quadrant: 0,
-        ring: 0,
-        label: "Python",
-        active: true,
-        link: "python.html",
-        moved: 0
-      },
-      {
-        quadrant: 0,
-        ring: 0,
-        label: "GraphQL",
-        active: true,
-        link: "graphql.html",
-        moved: 1
-      },
-      {
-        quadrant: 0,
-        ring: 0,
-        label: "TypeScript",
-        active: true,
-        link: "typescript.html",
-        moved: 0
-      },
-      {
-        quadrant: 0,
-        ring: 3,
-        label: "PHP",
-        active: true,
-        link: "php.html",
-        moved: 0
-      },
-      {
-        quadrant: 0,
-        ring: 3,
-        label: "Java",
-        active: true,
-        link: "java.html",
-        moved: 0
-      },
-      {
-        quadrant: 3,
-        ring: 3,
-        label: "Typeorm",
-        active: true,
-        link: "../datastores/typeorm.html",
-        moved: 0
-      },
-      {
-        quadrant: 3,
-        ring: 1,
-        label: "PrismaJs",
-        active: true,
-        link: "../datastores/prisma.html",
-        moved: 0
-      },
-      {
-        quadrant: 3,
-        ring: 1,
-        label: "KnexJs",
-        active: true,
-        link: "../datastores/knex.html",
-        moved: 0
-      },
-      {
-        quadrant: 3,
-        ring: 3,
-        label: "AWS SNS",
-        active: false,
-        link: "../queues/aws_sns.html",
-        moved: 0
-      },
-      {
-        quadrant: 3,
-        ring: 3,
-        label: "AWS SQS",
-        active: false,
-        link: "../queues/aws_sqs.html",
-        moved: 0
-      }
-  ]
-  //ENTRIES
-});
+    radar_visualization({
+        svg_id: "radar",
+        width: 1450,
+        height: 1000,
+        colors: {
+            background: "#fff",
+            grid: "#bbb",
+            inactive: "#ddd"
+        },
+        title: "Peacock Backend Tech Radar — 2024.07",
+        quadrants: [
+            {name: "Languages & Frameworks"},
+            {name: "Tools"},
+            {name: "3rd Party Integrations"},
+            {name: "Techniques"}
+        ],
+        rings: [
+            {name: "ADOPT", color: "#93c47d"},
+            {name: "TRIAL", color: "#93d2c2"},
+            {name: "ASSESS", color: "#fbdb84"},
+            {name: "HOLD", color: "#efafa9"}
+        ],
+        print_layout: true,
+        // zoomed_quadrant: 0,
+        //ENTRIES
+        entries: [
+            {
+                quadrant: 1,
+                ring: 0,
+                label: "GCP App Engine",
+                active: false,
+                link: "gcp-app-engine.html",
+                moved: 0
+            },
+            {
+                quadrant: 1,
+                ring: 0,
+                label: "GCP Cloud Run V2",
+                active: false,
+                link: "gcp-cloud-run-v2.html",
+                moved: 0
+            },
+            {
+                quadrant: 1,
+                ring: 0,
+                label: "GCP Pub-Sub",
+                active: false,
+                link: "gcp-pub-sub.html",
+                moved: 0
+            },
+            {
+                quadrant: 1,
+                ring: 0,
+                label: "GCP Storage",
+                active: false,
+                link: "gcp-storage.html",
+                moved: 0
+            },
+            {
+                quadrant: 0,
+                ring: 0,
+                label: "MongoDB",
+                active: false,
+                link: "mongodb.html",
+                moved: 0
+            },
+            {
+                quadrant: 0,
+                ring: 0,
+                label: "Node.js",
+                active: false,
+                link: "nodejs.html",
+                moved: 0
+            },
+            {
+                quadrant: 0,
+                ring: 0,
+                label: "pnpm",
+                active: false,
+                link: "pnpm.html",
+                moved: 0
+            },
+            {
+                quadrant: 0,
+                ring: 3,
+                label: "npm",
+                active: false,
+                link: "npm.html",
+                moved: 0
+            },
+            {
+                quadrant: 1,
+                ring: 0,
+                label: "Docker",
+                active: false,
+                link: "docker.html",
+                moved: 0
+            },
+            {
+                quadrant: 1,
+                ring: 0,
+                label: "Ava",
+                active: false,
+                link: "ava.html",
+                moved: 0
+            },
+            {
+                quadrant: 1,
+                ring: 0,
+                label: "c8",
+                active: false,
+                link: "c8.html",
+                moved: 0
+            },
+            {
+                quadrant: 1,
+                ring: 0,
+                label: "EsLint",
+                active: false,
+                link: "eslint.html",
+                moved: 0
+            },
+            {
+                quadrant: 1,
+                ring: 3,
+                label: "ts-node",
+                active: false,
+                link: "ts-node.html",
+                moved: 0
+            },
+            {
+                quadrant: 1,
+                ring: 3,
+                label: "tsc",
+                active: false,
+                link: "tsc.html",
+                moved: 0
+            },
+            {
+                quadrant: 1,
+                ring: 1,
+                label: "globby",
+                active: false,
+                link: "globby.html",
+                moved: 0
+            },
+            {
+                quadrant: 1,
+                ring: 1,
+                label: "estrella",
+                active: false,
+                link: "estrella.html",
+                moved: 0
+            },
+            {
+                quadrant: 1,
+                ring: 3,
+                label: "nodemon",
+                active: false,
+                link: "nodemon.html",
+                moved: 0
+            },
+            {
+                quadrant: 1,
+                ring: 0,
+                label: "Pulumi",
+                active: false,
+                link: "pulumi.html",
+                moved: 0
+            },
+            {
+                quadrant: 1,
+                ring: 0,
+                label: "CircleCI",
+                active: false,
+                link: "circleci.html",
+                moved: 0
+            },
+            {
+                quadrant: 1,
+                ring: 0,
+                label: "Github Actions",
+                active: false,
+                link: "github-actions.html",
+                moved: 0
+            },
+            {
+                quadrant: 3,
+                ring: 0,
+                label: "Serverless",
+                active: false,
+                link: "serverless.html",
+                moved: 0
+            },
+            {
+                quadrant: 3,
+                ring: 0,
+                label: "NeverThrow",
+                active: false,
+                link: "neverthrow.html",
+                moved: 0
+            },
+            {
+                quadrant: 3,
+                ring: 0,
+                label: "Functional Programming",
+                active: false,
+                link: "fp.html",
+                moved: 0
+            },
+            {
+                quadrant: 3,
+                ring: 3,
+                label: "Object Oriented Programming",
+                active: false,
+                link: "oop.html",
+                moved: 0
+            },
+            {
+                quadrant: 3,
+                ring: 0,
+                label: "Dependency Injection",
+                active: false,
+                link: "dependency-injection.html",
+                moved: 0
+            },
+            {
+                quadrant: 1,
+                ring: 2,
+                label: "@injectable-ts/core",
+                active: false,
+                link: "injectable-ts-core.html",
+                moved: 0
+            },
+            {
+                quadrant: 1,
+                ring: 0,
+                label: "date-fns",
+                active: false,
+                link: "date-fns.html",
+                moved: 0
+            },
+            {
+                quadrant: 1,
+                ring: 3,
+                label: "momentJs",
+                active: false,
+                link: "moment-js.html",
+                moved: 0
+            },
+            {
+                quadrant: 0,
+                ring: 3,
+                label: "ExpressJs",
+                active: false,
+                link: "express-js.html",
+                moved: 0
+            },
+            {
+                quadrant: 0,
+                ring: 0,
+                label: "JavaScript",
+                active: true,
+                link: "javascript.html",
+                moved: 0
+            },
+            {
+                quadrant: 3,
+                ring: 0,
+                label: "GraphQL",
+                active: true,
+                link: "graphql.html",
+                moved: 0
+            },
+            {
+                quadrant: 0,
+                ring: 0,
+                label: "TypeScript",
+                active: true,
+                link: "typescript.html",
+                moved: 0
+            },
+            {
+                quadrant: 1,
+                ring: 0,
+                label: "Typeorm",
+                active: true,
+                link: "typeorm.html",
+                moved: 0
+            },
+            {
+                quadrant: 3,
+                ring: 3,
+                label: "REST",
+                active: true,
+                link: "rest.html",
+                moved: 0
+            },
+            {
+                quadrant: 1,
+                ring: 0,
+                label: "ulid",
+                active: true,
+                link: "ulid.html",
+                moved: 0
+            },
+            {
+                quadrant: 1,
+                ring: 0,
+                label: "zod",
+                active: true,
+                link: "zod.html",
+                moved: 0
+            },
+            {
+                quadrant: 1,
+                ring: 0,
+                label: "winston",
+                active: true,
+                link: "winston.html",
+                moved: 0
+            },
+            {
+                quadrant: 1,
+                ring: 3,
+                label: "morgan",
+                active: true,
+                link: "morgan.html",
+                moved: 0
+            },
+            {
+                quadrant: 1,
+                ring: 3,
+                label: "axios",
+                active: true,
+                link: "axios.html",
+                moved: 0
+            },
+            {
+                quadrant: 1,
+                ring: 0,
+                label: "sinon",
+                active: true,
+                link: "sinon.html",
+                moved: 0
+            },
+            {
+                quadrant: 1,
+                ring: 0,
+                label: "supertest",
+                active: true,
+                link: "supertest.html",
+                moved: 0
+            },
+            {
+                quadrant: 1,
+                ring: 0,
+                label: "GOT",
+                active: true,
+                link: "got.html",
+                moved: 0
+            },
+            {
+                quadrant: 1,
+                ring: 0,
+                label: "Superjson Cjs",
+                active: true,
+                link: "superjson-cjs.html",
+                moved: 0
+            },
+            {
+                quadrant: 2,
+                ring: 0,
+                label: "Puppeteer",
+                active: true,
+                link: "puppeteer.html",
+                moved: 0
+            },
+            {
+                quadrant: 2,
+                ring: 0,
+                label: "Sharp",
+                active: true,
+                link: "sharp.html",
+                moved: 0
+            },
+            {
+                quadrant: 2,
+                ring: 0,
+                label: "@opentelemetry",
+                active: true,
+                link: "opentelemetry.html",
+                moved: 0
+            },
+            {
+                quadrant: 1,
+                ring: 0,
+                label: "fluent-ffmpeg",
+                active: true,
+                link: "fluent-ffmpeg.html",
+                moved: 0
+            },
+            {
+                quadrant: 2,
+                ring: 0,
+                label: "Ffmpeg",
+                active: true,
+                link: "ffmpeg.html",
+                moved: 0
+            },
+            {
+                quadrant: 2,
+                ring: 0,
+                label: "PexelsJs",
+                active: true,
+                link: "pexels.html",
+                moved: 0
+            },
+            {
+                quadrant: 2,
+                ring: 0,
+                label: "UnsplashJs",
+                active: true,
+                link: "unsplash.html",
+                moved: 0
+            },
+            {
+                quadrant: 2,
+                ring: 3,
+                label: "Shutterstock API",
+                active: true,
+                link: "shutterstock-api.html",
+                moved: 0
+            },
+            {
+                quadrant: 0,
+                ring: 0,
+                label: "JsonWebToken",
+                active: true,
+                link: "jsonwebtoken.html",
+                moved: 0
+            },
+            {
+                quadrant: 1,
+                ring: 0,
+                label: "@apollo/server",
+                active: true,
+                link: "apollo-server.html",
+                moved: 0
+            },
+            {
+                quadrant: 1,
+                ring: 0,
+                label: "@apollo/datasource-rest",
+                active: true,
+                link: "apollo-datasource-rest.html",
+                moved: 0
+            },
+            {
+                quadrant: 0,
+                ring: 0,
+                label: "Passport",
+                active: true,
+                link: "passport.html",
+                moved: 0
+            },
+            {
+                quadrant: 2,
+                ring: 0,
+                label: "Google Oauth2",
+                active: true,
+                link: "google-oauth2.html",
+                moved: 0
+            },
+            {
+                quadrant: 2,
+                ring: 0,
+                label: "GoogleApis",
+                active: true,
+                link: "googleapis.html",
+                moved: 0
+            },
+            {
+                quadrant: 2,
+                ring: 0,
+                label: "Stripe",
+                active: true,
+                link: "stripe.html",
+                moved: 0
+            },
+            {
+                quadrant: 1,
+                ring: 0,
+                label: "TypeGraphql",
+                active: true,
+                link: "type-graphql.html",
+                moved: 0
+            },
+            {
+                quadrant: 1,
+                ring: 2,
+                label: "Graphql Upload",
+                active: true,
+                link: "graphql-upload.html",
+                moved: 0
+            },
+            {
+                quadrant: 1,
+                ring: 0,
+                label: "TinyColor2",
+                active: true,
+                link: "tinycolor2.html",
+                moved: 0
+            },
+            {
+                quadrant: 1,
+                ring: 3,
+                label: "validate-color",
+                active: true,
+                link: "validate-color.html",
+                moved: 0
+            },
+            {
+                quadrant: 1,
+                ring: 0,
+                label: "dotenv",
+                active: true,
+                link: "dotenv.html",
+                moved: 0
+            },
+            {
+                quadrant: 1,
+                ring: 0,
+                label: "env-var",
+                active: true,
+                link: "env-var.html",
+                moved: 0
+            },
+            {
+                quadrant: 1,
+                ring: 0,
+                label: "nodemailer",
+                active: true,
+                link: "nodemailer.html",
+                moved: 0
+            },
+            {
+                quadrant: 2,
+                ring: 0,
+                label: "Mandrill",
+                active: true,
+                link: "mandrill.html",
+                moved: 0
+            },
+            {
+                quadrant: 1,
+                ring: 3,
+                label: "typescript-rest",
+                active: true,
+                link: "typescript-rest.html",
+                moved: 0
+            },
+        ]
+        //ENTRIES
+    });
 </script>
 
 <table>
-<tr>
-<td>
+    <tr>
+        <td>
 
-<h3>What is the Tech Radar?</h3>
+            <h3>What is the Tech Radar?</h3>
 
-<p>
-The Tellimer Tech Radar is a list of technologies, complemented by an assessment result, called <em>ring assignment</em>. We use four rings with the following semantics:
-</p>
+            <p>
+                The Peacock Tech Radar is a list of technologies, complemented by an assessment result, called <em>ring
+                assignment</em>. We use four rings with the following semantics:
+            </p>
 
-<ul>
-<li><strong>ADOPT</strong> &mdash; Technologies we have high confidence in to serve our purpose, also in large scale. Technologies with a usage culture in our Tellimer production environment, low risk and recommended to be widely used.</li>
-<li><strong>TRIAL</strong> &mdash; Technologies that we have seen work with success in project work to solve a real problem; first serious usage experience that confirm benefits and can uncover limitations. TRIAL technologies are slightly more risky; some engineers in our organization walked this path and will share knowledge and experiences.</li>
-<li><strong>ASSESS</strong> &mdash; Technologies that are promising and have clear potential value-add for us; technologies worth to invest some research and prototyping efforts in to see if it has impact. ASSESS technologies have higher risks; they are often brand new and highly unproven in our organisation. You will find some engineers that have knowledge in the technology and promote it, you may even find teams that have started a prototyping effort.</li>
-<li><strong>HOLD</strong> &mdash; Technologies not recommended to be used for new projects. Technologies that we think are not (yet) worth to (further) invest in. HOLD technologies should not be used for new projects, but usually can be continued for existing projects.</li>
-</ul>
+            <ul>
+                <li><strong>ADOPT</strong> &mdash; Technologies we have high confidence in to serve our purpose, also in
+                    large scale. Technologies with a usage culture in our Peacock production environment, low risk and
+                    recommended to be widely used.
+                </li>
+                <li><strong>TRIAL</strong> &mdash; Technologies that we have seen work with success in project work to
+                    solve a real problem; first serious usage experience that confirm benefits and can uncover
+                    limitations. TRIAL technologies are slightly more risky; some engineers in our organization walked
+                    this path and will share knowledge and experiences.
+                </li>
+                <li><strong>ASSESS</strong> &mdash; Technologies that are promising and have clear potential value-add
+                    for us; technologies worth to invest some research and prototyping efforts in to see if it has
+                    impact. ASSESS technologies have higher risks; they are often brand new and highly unproven in our
+                    organisation. You will find some engineers that have knowledge in the technology and promote it, you
+                    may even find teams that have started a prototyping effort.
+                </li>
+                <li><strong>HOLD</strong> &mdash; Technologies not recommended to be used for new projects. Technologies
+                    that we think are not (yet) worth to (further) invest in. HOLD technologies should not be used for
+                    new projects, but usually can be continued for existing projects.
+                </li>
+            </ul>
 
-</td><td>
+        </td>
+        <td>
 
-<h3>What is the purpose?</h3>
+            <h3>What is the purpose?</h3>
 
-<p>
-The Tech Radar is a tool to inspire and support engineering teams at Tellimer to pick the best technologies for new projects; it provides a platform to share knowledge and experience in technologies, to reflect on technology decisions and continuously evolve our technology landscape. Based on the <a href="https://www.thoughtworks.com/radar">pioneering work of ThoughtWorks</a>, our Tech Radar sets out the changes in technologies that are interesting in software development &mdash; changes that we think our engineering teams should pay attention to and consider using in their projects.
-</p>
+            <p>
+                The Tech Radar is a tool to inspire and support engineering teams at Peacock to pick the best
+                technologies for new projects; it provides a platform to share knowledge and experience in technologies,
+                to reflect on technology decisions and continuously evolve our technology landscape. Based on the <a
+                    href="https://www.thoughtworks.com/radar">pioneering work of ThoughtWorks</a>, our Tech Radar sets
+                out the changes in technologies that are interesting in software development &mdash; changes that we
+                think our engineering teams should pay attention to and consider using in their projects.
+            </p>
 
-<h3>How do we maintain it?</h3>
+            <h3>How do we maintain it?</h3>
 
-<p>
-The Tech Radar is maintained by the <em>Tellimer Core Team</em> &mdash; an open group of  senior Tellimer technologists committed to devote time to the Tech Radar purpose. The guild self organises to maintain the Tech Radar documents, including this public version. Assignment of technologies to rings is the outcome of ring change proposals, which are discussed and voted on in guild meetings. The Tech Radar depends on active participation and input from all engineering teams at Tellimer.
-</p>
+            <p>
+                The Tech Radar is maintained by the <em>Peacock Core Team</em> &mdash; an open group of senior Peacock
+                technologists committed to devote time to the Tech Radar purpose. The guild self organises to maintain
+                the Tech Radar documents, including this public version. Assignment of technologies to rings is the
+                outcome of ring change proposals, which are discussed and voted on in guild meetings. The Tech Radar
+                depends on active participation and input from all engineering teams at Peacock.
+            </p>
 
-</td></tr>
+        </td>
+    </tr>
 </table>
 
 <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  // ga('create', '-', 'auto');
-  // ga('send', 'pageview');
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+    // ga('create', '-', 'auto');
+    // ga('send', 'pageview');
 </script>
 
 </body>
